@@ -64,10 +64,13 @@
                     })
                         .then(response => response.json())
                         .then(data => {
-                            const {ordinances, resolutions, title} = data.data
+                            const {ordinances, resolutions, title, dates, proclamations} = data.data
+                            console.log(data.data)
                             $("#title").text(title)
                             $("#ordinances").text(ordinances)
                             $("#resolutions").text(resolutions)
+                            $("#dates").text(dates)
+                            $("#proclamations").text(proclamations)
                         })
                         .catch(error => console.error(error));
                 })
